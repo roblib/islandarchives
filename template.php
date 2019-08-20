@@ -3,7 +3,7 @@
 /**
  * @file
  * Template overrides as well as (pre-)process and alter hooks for the
- * islandimagined theme.
+ * islandarchives theme.
  */
 
 
@@ -13,15 +13,15 @@
 
 
 //main menu (top) using the menu block module
-function islandimagined_menu_tree__menu_block__1(&$variables) {
+function islandarchives_menu_tree__menu_block__1(&$variables) {
     return '<ul class="main-menu__items dropdown menu" data-dropdown-menu>' . $variables['tree'] . '</ul>';
 }
 //main menu (top) using the menu block module
-function islandimagined_menu_tree__menu_block__2(&$variables) {
+function islandarchives_menu_tree__menu_block__2(&$variables) {
     return '<ul class="main-menu__items dropdown menu" data-dropdown-menu>' . $variables['tree'] . '</ul>';
 }
 
-function islandimagined_menu_local_tasks(&$variables) {
+function islandarchives_menu_local_tasks(&$variables) {
   if (!path_is_admin(current_path())) {
     $output = '';
 
@@ -40,7 +40,7 @@ function islandimagined_menu_local_tasks(&$variables) {
   }
 }
 
-function islandimagined_menu_local_task($variables) {
+function islandarchives_menu_local_task($variables) {
   if (!path_is_admin(current_path())) {   $link = $variables['element']['#link'];
   $link_text = $link['title'];
 
@@ -63,7 +63,7 @@ function islandimagined_menu_local_task($variables) {
   }
 }
 
-function islandimagined_form_alter(&$form, &$form_state, $form_id) {
+function islandarchives_form_alter(&$form, &$form_state, $form_id) {
 	// target a single form
 	if($form_id == "islandora_solr_simple_search_form"){
 		$form['simple']['islandora_simple_search_query']['#default_value'] = t('Search IslandScholar:'); // Set a default value for the textfield

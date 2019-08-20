@@ -1,4 +1,4 @@
-name = islandimagined
+name = islandarchives
 description = Please provide a description for your theme.
 base theme = omega
 screenshot = screenshot.png
@@ -8,14 +8,14 @@ core = 7.x
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = build/css/islandimagined.reset.css
-stylesheets[all][] = build/css/islandimagined.styles.css
+stylesheets[all][] = build/css/islandarchives.reset.css
+stylesheets[all][] = build/css/islandarchives.styles.css
 
 ; ========================================
 ; Scripts
 ; ========================================
 scripts[] = build/js/foundation.min.js
-scripts[] = build/js/islandimagined.behaviors.js
+scripts[] = build/js/islandarchives.behaviors.js
 
 ; ========================================
 ; Regions

@@ -10,7 +10,7 @@
  *
  * @ingroup themeable
  */
-function islandimagined_breadcrumb($variables) {
+function islandarchives_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
   if (!empty($breadcrumb)) {

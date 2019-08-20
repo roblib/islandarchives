@@ -17,14 +17,14 @@ var gulp = require("gulp"),
 //############################
 
 //name of the drupal theme:
-var _themeName = "islandimagined";
+var _themeName = "islandarchives";
 
 //url of the remote site
-var _url = "https://islandimagined.dev.islandarchives.ca/";
+var _url = "https://islandarchives.dev.islandarchives.ca/";
 
 //path to the themes assets (compiled css, js, imgs) dir
 //var _path = "/themes/orion/build";
-var _path = "/sites/islandimagined.dev.islandarchives.ca/themes/islandimagined/build";
+var _path = "/sites/islandarchives.dev.islandarchives.ca/themes/islandarchives/build";
 
 //make sure the 2 Dirs are correct
 var config = {
@@ -146,16 +146,16 @@ gulp.task("browserSync", ["sass_dev", "js"], function() {
         startPath: "user",
         //open: false,
         injectChanges: true,
-        files: ['build/css/islandimagined.styles.css', 'build/js/islandimagined.behaviors.js'],
+        files: ['build/css/islandarchives.styles.css', 'build/js/islandarchives.behaviors.js'],
         plugins: ['bs-rewrite-rules'],
         rewriteRules: [
             {
-                match: '/sites/islandimagined.dev.islandarchives.ca/themes/islandimagined/build/css/islandimagined.styles.css',
-                replace: '/build/css/islandimagined.styles.css'
+                match: '/sites/islandarchives.dev.islandarchives.ca/themes/islandarchives/build/css/islandarchives.styles.css',
+                replace: '/build/css/islandarchives.styles.css'
             },
             {
-                match: '/sites/islandimagined.dev.islandarchives.ca/themes/islandimagined/build/js/islandimagined.behaviors.js',
-                replace: '/build/js/islandimagined.behaviors.js'
+                match: '/sites/islandarchives.dev.islandarchives.ca/themes/islandarchives/build/js/islandarchives.behaviors.js',
+                replace: '/build/js/islandarchives.behaviors.js'
             }
         ]
 

@@ -1,0 +1,31 @@
+name = islandimagined
+description = Please provide a description for your theme.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = build/css/islandimagined.reset.css
+stylesheets[all][] = build/css/islandimagined.styles.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = build/js/foundation.min.js
+scripts[] = build/js/islandimagined.behaviors.js
+
+; ========================================
+; Regions
+; ========================================
+regions[branding] = Branding
+regions[header] = Header
+regions[navigation] = Navigation
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[footer] = Footer

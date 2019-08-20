@@ -1,0 +1,36 @@
+
+/*
+ *landing page tweaks
+ */
+.landing-page {
+  .pageTitle,
+  .breadcrumbs,
+  .tabs {
+
+    display:none;
+
+  }
+}
+/*
+ *cards
+ */
+.card_icon { 
+  svg {
+    width: 100%;
+    height:auto; 
+    fill: $black;
+  }
+  display:none;
+}
+.interactive .wheel,
+.learn_more .telescope,
+.archives .sextant {
+  display: block;
+}
+.card_icon {
+
+  width: rem-calc(40);
+  float: left;
+  margin-right: $global-margin/2;
+
+}

@@ -1,1 +1,3 @@
-# islandimagined
+# Island Archives Theme
+## Required Modules
+- blockify

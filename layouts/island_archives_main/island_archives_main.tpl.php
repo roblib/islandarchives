@@ -9,27 +9,19 @@
 ////#######################################################################
 
 //image path
-$image_path = drupal_get_path('theme', 'islandimagined') . '/images/';
+$image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
 
 
 ?>
 
 <div<?php print $attributes; ?>>
-  <div class="nav-wrapper">
 
+  <div class="nav-wrapper">
     <nav class="topnav" role="navigation">
       <div class="site-branding">
-        <!--<?php if ($logo): ?>-->
-        <!--<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo">-->
-        <!--<img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />-->
-        <!--</a>-->
-        <!--<?php endif; ?>-->
-
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo">
-
           <?php echo file_get_contents( $image_path . "upei.svg"); ?>
         </a>
-
         <?php if ($site_name): ?>
         <a href="<?php print $front_page; ?>" class="site-branding__name" title="<?php print t('Home'); ?>" rel="home">IslandArchives </a>
         <?php endif; ?>
@@ -38,18 +30,14 @@ $image_path = drupal_get_path('theme', 'islandimagined') . '/images/';
         <?php endif; ?>
       </div>
       <?php print render($page['navigation']); ?>
-
     </nav>
-
   </div>
+
   <header class="l-header l-constrained" role="banner">
     <!--site branding-->
-
     <div class="site-name__container">
       <div class="site-name__icon">
-
         <?php echo file_get_contents( $image_path . "compass.svg"); ?>
-
       </div>
 
       <?php if ($site_name): ?>

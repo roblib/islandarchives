@@ -1,7 +1,7 @@
-name = Nekkid
-description = A stack of regions with no styles or layout.
+name = Island Archives Main Page Template
+description = Island Archives Main Page Template.
 preview = preview.png
-template = nekkid-layout
+template = island_archives_main
 
 ; Regions
 regions[branding]       = Branding
@@ -16,5 +16,5 @@ regions[sidebar_second] = Second sidebar
 regions[footer]         = Footer
 
 ; Stylesheets
-stylesheets[all][] = css/layouts/nekkid/nekkid.layout.css
-;stylesheets[all][] = css/layouts/nekkid/nekkid.layout.no-query.css
+stylesheets[all][] = css/layouts/island_archives_main/island_archives_main.layout.css
+;stylesheets[all][] = css/layouts/island_archives_main/island_archives_main.layout.no-query.css

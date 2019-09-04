@@ -57,7 +57,7 @@
         #responsive-menu {
             //margin-top: $top_spacing;
         }
-        .main-menu {
+        .block--menu {
             @extend .top-bar-left;
             margin-top: 0;
             //border-radius: 3px 0 0 3px;
@@ -67,12 +67,21 @@
                 border-radius: 4px 0 0 4px;
                 border: 1px solid #776554;
             }
+            a {
+                color: #fff;
+            }
         }
 
-        .simple-search {
+        .block--islandora-solr-simple {
             @extend .top-bar-right;
             //margin-top: rem-calc(8);
             width: $topbar-input-width !important;
+            input {
+                margin-bottom:0;
+            }
+            .form-submit {
+                display:none;
+            }
         }
     }
 }
@@ -92,7 +101,7 @@
 }
 .l-region--navigation {
     display: none;
-    @include breakpoint(medium) {
+    @include breakpoint(1217px) {
         display: flex;
         width: 100%;
         align-items: center;

@@ -58,20 +58,6 @@
 /**********
  *  junk  *
  **********/
-.block--system-main-menu {
-  .menu {
-    //@extend vertical;
-    @include menu-direction(vertical);
-    .menu {
-
-      @extend .nested;
-
-    }
-
-  }
-
-}
-
 .breadcrumb {
 
   @include breadcrumbs-container;

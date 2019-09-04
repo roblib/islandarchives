@@ -20,12 +20,12 @@ scripts[] = build/js/islandarchives.behaviors.js
 ; ========================================
 ; Regions
 ; ========================================
-regions[branding] = Branding
-regions[header] = Header
+;regions[branding] = Branding
 regions[navigation] = Navigation
-regions[highlighted] = Highlighted
+regions[header] = Header
+;regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content
 regions[sidebar_first] = First Sidebar
-regions[sidebar_second] = Second Sidebar
+;regions[sidebar_second] = Second Sidebar
 regions[footer] = Footer

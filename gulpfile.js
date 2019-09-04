@@ -19,16 +19,13 @@ var gulp = require("gulp"),
 //name of the drupal theme:
 var _themeName = "islandarchives";
 
-//url of the remote site
-var _url = "https://islandarchives.dev.islandarchives.ca/";
-
 //path to the themes assets (compiled css, js, imgs) dir
 //var _path = "/themes/orion/build";
 var _path = "/sites/islandarchives.dev.islandarchives.ca/themes/islandarchives/build";
 
 //make sure the 2 Dirs are correct
 var config = {
-  remoteURL: _url,
+  remoteURL: "https://islandarchives.dev.islandarchives.ca/",
   srcDir: "./src",
   injectDir: "./build",
   //localPath: _path,
@@ -139,7 +136,7 @@ gulp.task("js", function() {
 gulp.task("browserSync", ["sass_dev", "js"], function() {
 
   browserSync.init({
-        proxy: _url,
+        proxy: config.remoteURL,
         //port: browserSyncPort,
         logLevel: 'debug',
         serveStatic: ['.'],
@@ -150,11 +147,13 @@ gulp.task("browserSync", ["sass_dev", "js"], function() {
         plugins: ['bs-rewrite-rules'],
         rewriteRules: [
             {
-                match: '/sites/islandarchives.dev.islandarchives.ca/themes/islandarchives/build/css/islandarchives.styles.css',
+
+                match: '/sites/all/themes/islandarchives/build/css/islandarchives.styles.css',
                 replace: '/build/css/islandarchives.styles.css'
             },
             {
-                match: '/sites/islandarchives.dev.islandarchives.ca/themes/islandarchives/build/js/islandarchives.behaviors.js',
+
+                match: '/sites/all/themes/islandarchives/build/js/islandarchives.behaviors.js',
                 replace: '/build/js/islandarchives.behaviors.js'
             }
         ]

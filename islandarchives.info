@@ -17,6 +17,9 @@ stylesheets[all][] = build/css/islandarchives.styles.css
 scripts[] = build/js/foundation.min.js
 scripts[] = build/js/islandarchives.behaviors.js
 
+;-------------- CSS FOAD -------------
+stylesheets[all][] = system.menus.theme.css
+
 ; ========================================
 ; Regions
 ; ========================================

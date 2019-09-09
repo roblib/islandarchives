@@ -60,7 +60,8 @@ margin-top: $global-margin;
    width: 11rem;
  
  }
- .l-region--footer {
+ //.l-region--footer {
+ .footer-logos {
      @include breakpoint(medium){
      @include flex-grid-row();
      };

@@ -3,6 +3,17 @@
 
   padding-top: $global_padding;
 }
+.l-region--header {
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+    .topnav {
+
+  background:$tan-3;
+    }
+}
 
 
 
@@ -42,10 +53,10 @@ header {
 }
 
 $dropdownmenu-background: $tan-3;
-.main-menu {
+header .menu {
     //display:none;
-  text-align:center;
-  margin-top: $global-margin;
+  text-align:left;
+  //margin-top: $global-margin;
   @extend .menu-centered;
   &__items {
 

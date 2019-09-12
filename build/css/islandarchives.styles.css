@@ -6495,6 +6495,89 @@ header .menu {
   -moz-appearance: none;
   appearance: none; }
 
+.offcanvas-full-screen {
+  position: fixed;
+  z-index: 12;
+  transition: transform 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: #2f2b27;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  width: 250px;
+  -ms-transform: translateX(-250px);
+      transform: translateX(-250px); }
+  [data-whatinput='mouse'] .offcanvas-full-screen {
+    outline: 0; }
+  .offcanvas-full-screen.is-transition-push {
+    z-index: 12; }
+  .offcanvas-full-screen.is-closed {
+    visibility: hidden; }
+  .offcanvas-full-screen.is-transition-overlap {
+    z-index: 13; }
+    .offcanvas-full-screen.is-transition-overlap.is-open {
+      box-shadow: 0 0 10px rgba(47, 43, 39, 0.7); }
+  .offcanvas-full-screen.is-open {
+    -ms-transform: translate(0, 0);
+        transform: translate(0, 0); }
+  .off-canvas-content .off-canvas.position-left {
+    -ms-transform: translateX(-250px);
+        transform: translateX(-250px); }
+    .off-canvas-content .off-canvas.position-left.is-transition-overlap.is-open {
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0); }
+  .off-canvas-content.is-open-left.has-transition-push {
+    -ms-transform: translateX(250px);
+        transform: translateX(250px); }
+  .offcanvas-full-screen.is-transition-push {
+    box-shadow: inset -13px 0 20px -13px rgba(47, 43, 39, 0.25); }
+
+.offcanvas-full-screen-inner {
+  padding: 1rem;
+  text-align: center; }
+
+.offcanvas-full-screen-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  [data-whatinput='mouse'] .offcanvas-full-screen-menu li {
+    outline: 0; }
+  .offcanvas-full-screen-menu a,
+  .offcanvas-full-screen-menu .button,
+  .offcanvas-full-screen-menu input[type="submit"] {
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+    padding: 0.7rem 1rem; }
+  .offcanvas-full-screen-menu input,
+  .offcanvas-full-screen-menu select,
+  .offcanvas-full-screen-menu a,
+  .offcanvas-full-screen-menu button {
+    margin-bottom: 0; }
+  .offcanvas-full-screen-menu input {
+    display: inline-block; }
+  .offcanvas-full-screen-menu a {
+    color: #fefefe; }
+    .offcanvas-full-screen-menu a:hover {
+      color: #b2b2b2; }
+
+.offcanvas-full-screen-close {
+  color: #fefefe;
+  font-size: 5rem; }
+  .offcanvas-full-screen-close:hover {
+    color: #b2b2b2; }
+
 .topnav {
   display: -ms-flexbox;
   display: flex;

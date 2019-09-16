@@ -85,6 +85,10 @@
     $offcanvas-full-screen-width: 100%;
     $offcanvas-full-screen-closebutton-size: 5rem;
     .mobile-nav-panel {
+        .l-region--navigation {
+            width: 301px;
+            margin: 0 auto;
+        }
         .l-region--navigation > * {
             margin-bottom: $global-margin;
         }

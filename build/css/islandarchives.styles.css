@@ -6488,6 +6488,10 @@ header .menu {
   -moz-appearance: none;
   appearance: none; }
 
+.mobile-nav-panel .l-region--navigation {
+  width: 301px;
+  margin: 0 auto; }
+
 .mobile-nav-panel .l-region--navigation > * {
   margin-bottom: 1rem; }
 

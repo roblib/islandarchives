@@ -5930,10 +5930,8 @@ a.thumbnail {
     margin-right: 0; }
   .top-bar input.button, .top-bar input[type="submit"] {
     width: auto; }
-  .top-bar .top-bar-left, .top-bar .topnav .site-branding, .topnav .top-bar .site-branding, .top-bar .topnav .block--menu, .topnav .top-bar .block--menu,
-  .top-bar .top-bar-right,
-  .top-bar .topnav .block--islandora-solr-simple,
-  .topnav .top-bar .block--islandora-solr-simple {
+  .top-bar .top-bar-left, .top-bar .topnav .site-branding, .topnav .top-bar .site-branding,
+  .top-bar .top-bar-right {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%; }
@@ -5941,14 +5939,11 @@ a.thumbnail {
     .top-bar {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
-      .top-bar .top-bar-left, .top-bar .topnav .site-branding, .topnav .top-bar .site-branding, .top-bar .topnav .block--menu, .topnav .top-bar .block--menu {
+      .top-bar .top-bar-left, .top-bar .topnav .site-branding, .topnav .top-bar .site-branding {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
         margin-right: auto; }
-      
-      .top-bar .top-bar-right,
-      .top-bar .topnav .block--islandora-solr-simple,
-      .topnav .top-bar .block--islandora-solr-simple {
+      .top-bar .top-bar-right {
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
         margin-left: auto; } }
@@ -5956,10 +5951,8 @@ a.thumbnail {
     .top-bar.stacked-for-medium {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-      .top-bar.stacked-for-medium .top-bar-left, .top-bar.stacked-for-medium .topnav .site-branding, .topnav .top-bar.stacked-for-medium .site-branding, .top-bar.stacked-for-medium .topnav .block--menu, .topnav .top-bar.stacked-for-medium .block--menu,
-      .top-bar.stacked-for-medium .top-bar-right,
-      .top-bar.stacked-for-medium .topnav .block--islandora-solr-simple,
-      .topnav .top-bar.stacked-for-medium .block--islandora-solr-simple {
+      .top-bar.stacked-for-medium .top-bar-left, .top-bar.stacked-for-medium .topnav .site-branding, .topnav .top-bar.stacked-for-medium .site-branding,
+      .top-bar.stacked-for-medium .top-bar-right {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
         max-width: 100%; } }
@@ -5967,10 +5960,8 @@ a.thumbnail {
     .top-bar.stacked-for-large {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-      .top-bar.stacked-for-large .top-bar-left, .top-bar.stacked-for-large .topnav .site-branding, .topnav .top-bar.stacked-for-large .site-branding, .top-bar.stacked-for-large .topnav .block--menu, .topnav .top-bar.stacked-for-large .block--menu,
-      .top-bar.stacked-for-large .top-bar-right,
-      .top-bar.stacked-for-large .topnav .block--islandora-solr-simple,
-      .topnav .top-bar.stacked-for-large .block--islandora-solr-simple {
+      .top-bar.stacked-for-large .top-bar-left, .top-bar.stacked-for-large .topnav .site-branding, .topnav .top-bar.stacked-for-large .site-branding,
+      .top-bar.stacked-for-large .top-bar-right {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
         max-width: 100%; } }
@@ -5980,9 +5971,8 @@ a.thumbnail {
       flex: 0 0 auto;
   margin: 0.5rem 1rem 0.5rem 0; }
 
-.top-bar-left, .topnav .site-branding, .topnav .block--menu,
-.top-bar-right,
-.topnav .block--islandora-solr-simple {
+.top-bar-left, .topnav .site-branding,
+.top-bar-right {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto; }
 
@@ -6381,6 +6371,9 @@ header {
   -ms-flex-pack: center;
       justify-content: center; }
 
+header nav {
+  background: #786554; }
+
 header .menu {
   text-align: left; }
   header .menu__items {
@@ -6495,6 +6488,12 @@ header .menu {
   -moz-appearance: none;
   appearance: none; }
 
+.mobile-nav-panel .l-region--navigation > * {
+  margin-bottom: 1rem; }
+
+.form-submit {
+  display: none !important; }
+
 .offcanvas-full-screen {
   position: fixed;
   z-index: 12;
@@ -6508,7 +6507,12 @@ header .menu {
   overflow-y: auto;
   width: 250px;
   -ms-transform: translateX(-250px);
-      transform: translateX(-250px); }
+      transform: translateX(-250px);
+  width: 100%;
+  height: 100%;
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  overflow-y: auto; }
   [data-whatinput='mouse'] .offcanvas-full-screen {
     outline: 0; }
   .offcanvas-full-screen.is-transition-push {
@@ -6538,6 +6542,7 @@ header .menu {
   padding: 1rem;
   text-align: center; }
 
+.mobile-nav-panel .menu,
 .offcanvas-full-screen-menu {
   padding: 0;
   margin: 0;
@@ -6551,8 +6556,12 @@ header .menu {
       flex-wrap: nowrap;
   -ms-flex-direction: column;
       flex-direction: column; }
-  [data-whatinput='mouse'] .offcanvas-full-screen-menu li {
+  [data-whatinput='mouse'] .mobile-nav-panel .menu li, [data-whatinput='mouse']
+  .offcanvas-full-screen-menu li {
     outline: 0; }
+  .mobile-nav-panel .menu a,
+  .mobile-nav-panel .menu .button,
+  .mobile-nav-panel .menu input[type="submit"],
   .offcanvas-full-screen-menu a,
   .offcanvas-full-screen-menu .button,
   .offcanvas-full-screen-menu input[type="submit"] {
@@ -6560,15 +6569,22 @@ header .menu {
     text-decoration: none;
     display: block;
     padding: 0.7rem 1rem; }
+  .mobile-nav-panel .menu input,
+  .mobile-nav-panel .menu select,
+  .mobile-nav-panel .menu a,
+  .mobile-nav-panel .menu button,
   .offcanvas-full-screen-menu input,
   .offcanvas-full-screen-menu select,
   .offcanvas-full-screen-menu a,
   .offcanvas-full-screen-menu button {
     margin-bottom: 0; }
+  .mobile-nav-panel .menu input,
   .offcanvas-full-screen-menu input {
     display: inline-block; }
+  .mobile-nav-panel .menu a,
   .offcanvas-full-screen-menu a {
     color: #fefefe; }
+    .mobile-nav-panel .menu a:hover,
     .offcanvas-full-screen-menu a:hover {
       color: #b2b2b2; }
 
@@ -6577,6 +6593,22 @@ header .menu {
   font-size: 5rem; }
   .offcanvas-full-screen-close:hover {
     color: #b2b2b2; }
+
+.topnav .l-region--navigation {
+  display: none; }
+  @media screen and (min-width: 76.0625em) {
+    .topnav .l-region--navigation {
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: end;
+          justify-content: flex-end; } }
+
+@media screen and (min-width: 76.0625em) {
+  .menu-icon {
+    display: none; } }
 
 .topnav {
   display: -ms-flexbox;
@@ -6636,8 +6668,6 @@ header .menu {
     .topnav .site-branding__slogan {
       font-size: 1rem;
       display: none; }
-  .topnav .block--menu {
-    margin-top: 0; }
   .topnav .main-menu__items > li.first.is-dropdown-submenu-parent {
     border-radius: 4px 0 0 4px;
     border: 1px solid #776554; }
@@ -6649,50 +6679,6 @@ header .menu {
       margin-bottom: 0; }
     .topnav .block--islandora-solr-simple .form-submit {
       display: none; }
-
-@media screen and (max-width: 39.99875em) {
-  .mobile-menu-button {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 16px;
-    cursor: pointer; }
-    .mobile-menu-button::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #fff;
-      box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
-      content: ''; }
-    .mobile-menu-button:hover::after {
-      background: #8a8a8a;
-      box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a; } }
-
-.topnav .main-menu {
-  display: none; }
-
-.topnav.is-stuck .main-menu {
-  display: block; }
-
-.l-region--navigation {
-  display: none; }
-  @media screen and (min-width: 76.0625em) {
-    .l-region--navigation {
-      display: -ms-flexbox;
-      display: flex;
-      width: 100%;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-      margin-top: 0.5rem; } }
-
-.adminimal-menu .topnav.is-stuck {
-  margin-top: 1.75rem !important; }
 
 .nav-wrapper {
   /*padding: 0 1rem;*/ }
@@ -6721,33 +6707,6 @@ header .menu {
 /**********
  *  junk  *
  **********/
-* {
-  background-color: rgba(255, 0, 0, 0.2); }
-
-* * {
-  background-color: rgba(0, 255, 0, 0.2); }
-
-* * * {
-  background-color: rgba(0, 0, 255, 0.2); }
-
-* * * * {
-  background-color: rgba(255, 0, 255, 0.2); }
-
-* * * * * {
-  background-color: rgba(0, 255, 255, 0.2); }
-
-* * * * * * {
-  background-color: rgba(255, 255, 0, 0.2); }
-
-* * * * * * * {
-  background-color: rgba(255, 0, 0, 0.2); }
-
-* * * * * * * * {
-  background-color: rgba(0, 255, 0, 0.2); }
-
-* * * * * * * * * {
-  background-color: rgba(0, 0, 255, 0.2); }
-
 .breadcrumb {
   margin: 0 0 1rem 0;
   list-style: none; }

@@ -21,6 +21,12 @@ scripts[] = build/js/islandarchives.behaviors.js
 stylesheets[all][] = system.menus.theme.css
 
 ; ========================================
+; libraries
+; ========================================
+scripts[]          = libraries/blueimp-gallery/js/blueimp-gallery.js
+stylesheets[all][] = libraries/blueimp-gallery/css/blueimp-gallery.css
+
+; ========================================
 ; Regions
 ; ========================================
 ;regions[branding] = Branding

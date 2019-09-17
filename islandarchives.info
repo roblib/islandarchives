@@ -18,6 +18,12 @@ scripts[] = build/js/foundation.min.js
 scripts[] = build/js/islandarchives.behaviors.js
 
 ; ========================================
+; libraries
+; ========================================
+scripts[]          = libraries/blueimp-gallery/js/blueimp-gallery.js
+stylesheets[all][] = libraries/blueimp-gallery/css/blueimp-gallery.css
+
+; ========================================
 ; Regions
 ; ========================================
 ;regions[branding] = Branding

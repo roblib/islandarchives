@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/rdrew/orion#readme",
   "devDependencies": {
+    "blueimp-gallery": "^2.35.0",
     "browser-sync": "^2.18.8",
     "bs-rewrite-rules": "^2.1.2",
     "del": "^2.2.2",

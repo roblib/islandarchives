@@ -42,11 +42,6 @@
 //  37. Top Bar
 
 @import 'util/util';
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon|IM+Fell+French+Canon+SC|IM+Fell+Great+Primer|IM+Fell+Great+Primer+SC');
-$font__fell-1: 'IM Fell Great Primer', serif;
-$font__fell-1--sc: 'IM Fell Great Primer SC', serif;
-$font__fell-2: 'IM Fell French Canon', serif;
-$font__fell-2--sc: 'IM Fell French Canon SC', serif;
 // 1. Global
 // ---------
 
@@ -82,7 +77,7 @@ $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
 //$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$body-font-family: $font__fell-1;
+$body-font-family: $font__vollkorn;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -124,7 +119,7 @@ $block-grid-max: 8;
 // ------------------
 
 //$header-font-family: $body-font-family;
-$header-font-family: $font__fell-1--sc;
+$header-font-family: $font__vollkorn;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

@@ -6496,9 +6496,6 @@ header .menu {
 .mobile-nav-panel .l-region--navigation > * {
   margin-bottom: 1rem; }
 
-.form-submit {
-  display: none !important; }
-
 .offcanvas-full-screen {
   position: fixed;
   z-index: 12;

@@ -6383,8 +6383,7 @@ header .menu {
     font-family: "IM Fell Great Primer SC", serif;
     color: #fefefe; }
     header .menu a:hover {
-      background: #F6DBBB;
-      color: #2f2b27; }
+      background: #F6DBBB; }
 
 .dropdown.menu > li > a {
   background: #786554; }

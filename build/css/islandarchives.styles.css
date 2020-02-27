@@ -6683,8 +6683,10 @@ header .menu {
       display: none; }
 
 .dropdown.menu > li.is-active > a {
-  background: transparent;
+  background: #786554 !important;
   color: #fff; }
+  .dropdown.menu > li.is-active > a:hover {
+    text-decoration: underline; }
 
 .nav-wrapper {
   /*padding: 0 1rem;*/ }

@@ -158,6 +158,9 @@
 @include topnav-mobile;
 @include topnav;
 .dropdown.menu > li.is-active > a {
-  background: transparent;
+  background: $tan-3 !important;
   color: #fff;
+  &:hover {
+    text-decoration: underline;
+  }
 }

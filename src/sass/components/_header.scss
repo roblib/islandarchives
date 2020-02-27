@@ -68,10 +68,11 @@ header .menu {
   }
   a {
 
-    font-family: $font__fell-1--sc;
+    //font-family: $font__fell-1--sc;
     color: $white;
     &:hover {
       background: $tan-1;
+      text-decoration: underline;
       //color:$black;
     }
   }

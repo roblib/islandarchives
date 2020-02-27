@@ -6380,10 +6380,10 @@ header .menu {
   header .menu__items {
     background: #786554; }
   header .menu a {
-    font-family: "IM Fell Great Primer SC", serif;
     color: #fefefe; }
     header .menu a:hover {
-      background: #F6DBBB; }
+      background: #F6DBBB;
+      text-decoration: underline; }
 
 .dropdown.menu > li > a {
   background: #786554; }

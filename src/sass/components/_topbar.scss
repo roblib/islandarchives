@@ -157,3 +157,7 @@
 
 @include topnav-mobile;
 @include topnav;
+.dropdown.menu > li.is-active > a {
+  background: transparent;
+  color: #fff;
+}

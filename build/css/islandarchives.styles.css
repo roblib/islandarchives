@@ -6682,6 +6682,10 @@ header .menu {
     .topnav .block--islandora-solr-simple .form-submit {
       display: none; }
 
+.dropdown.menu > li.is-active > a {
+  background: transparent;
+  color: #fff; }
+
 .nav-wrapper {
   /*padding: 0 1rem;*/ }
 

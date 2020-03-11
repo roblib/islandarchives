@@ -36,11 +36,11 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
   <div class="nav-wrapper">
     <nav class="topnav" role="navigation">
       <div class="site-branding">
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo">
+        <a href="https://upei.ca" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo">
           <?php echo file_get_contents( $image_path . "upei.svg"); ?>
         </a>
         <?php if ($site_name): ?>
-        <a href="<?php print $front_page; ?>" class="site-branding__name" title="<?php print t('Home'); ?>" rel="home">IslandArchives </a>
+        <a href="http://islandarchives.ca" class="site-branding__name" title="<?php print t('Home'); ?>" rel="home">IslandArchives </a>
         <?php endif; ?>
         <?php if ($site_slogan): ?>
         <h2 class="site-branding__slogan"><?php print $site_slogan; ?></h2>

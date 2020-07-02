@@ -305,7 +305,7 @@ $card-font-color: $body-font-color;
 /*$card-divider-background: $light-gray;*/
 $card-divider-background: $tan-2;
 //$card-border: 1px solid $light-gray;
-$card-border: none;
+$card-border: 1px solid #ccc;
 $card-shadow: none;
 $card-border-radius: $global-radius;
 $card-padding: $global-padding;
@@ -347,7 +347,7 @@ $dropdown-padding: 1rem;
 $dropdown-background: $body-background;
 $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: 1rem;
-$dropdown-width: 300px;
+$dropdown-width: 100%;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
   tiny: 100px,

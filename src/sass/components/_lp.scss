@@ -1,4 +1,25 @@
+.collection-grid {
+  list-style-type: none;
+  @include xy-grid-container();
+    @include xy-grid;
 
+
+  &__collection {
+  @include xy-cell(6);
+
+  @include card-container(none, inherit, $global-margin, 1px solid #ccc, 0px, none);
+
+
+  }
+  &__collection--title {
+    @include card-divider;
+@extend h4;
+  }
+  &__collection--description {
+    @include card-section;
+
+  }
+}
 /*
  *landing page tweaks
  */

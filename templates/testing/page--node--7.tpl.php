@@ -45,7 +45,9 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
 					<?php endif; ?>
 				</div>
 				<?php print render($page['navigation']); ?>
-				<button onclick="searchDropdown()" class="search-dropdown-toggle button" type="button" data-toggle="search-dropdown">Toggle Dropdown</button>
+				<button onclick="searchDropdown()" class="search-dropdown-toggle button" type="button" data-toggle="search-dropdown">
+						<?php echo file_get_contents( $image_path . "Magnifying_glass_icon.svg"); ?>
+</button>
 				<button class="menu-icon light" type="button" data-toggle="offcanvas-full-screen"></button>
 			</nav>
 <div class="search-dropdown" id="search-dropdown" ><div class="dropdown-content">

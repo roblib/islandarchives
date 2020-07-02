@@ -2974,6 +2974,7 @@ h2,
 .site-slogan,
 h3,
 h4,
+.collection-grid__collection--title,
 h5,
 h6,
 pre,
@@ -3009,7 +3010,8 @@ h1, .h1,
 h2,
 .site-slogan, .h2,
 h3, .h3,
-h4, .h4,
+h4,
+.collection-grid__collection--title, .h4,
 h5, .h5,
 h6, .h6 {
   font-family: "Vollkorn", serif;
@@ -3021,7 +3023,8 @@ h6, .h6 {
   h2 small,
   .site-slogan small, .h2 small,
   h3 small, .h3 small,
-  h4 small, .h4 small,
+  h4 small,
+  .collection-grid__collection--title small, .h4 small,
   h5 small, .h5 small,
   h6 small, .h6 small {
     line-height: 0;
@@ -3047,7 +3050,9 @@ h3, .h3 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-h4, .h4 {
+
+h4,
+.collection-grid__collection--title, .h4 {
   font-size: 1.125rem;
   line-height: 1.4;
   margin-top: 0;
@@ -3074,7 +3079,9 @@ h6, .h6 {
     font-size: 2.125rem; }
   h3, .h3 {
     font-size: 1.5625rem; }
-  h4, .h4 {
+  
+  h4,
+  .collection-grid__collection--title, .h4 {
     font-size: 1.5625rem; }
   h5, .h5 {
     font-size: 1.25rem; }
@@ -4118,7 +4125,7 @@ a.button:hover, a.button:focus {
   -ms-flex-positive: 1;
       flex-grow: 1;
   margin-bottom: 1rem;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 0;
   background: #fefefe;
   box-shadow: none;
@@ -4481,7 +4488,7 @@ a.button:hover, a.button:focus {
   position: absolute;
   z-index: 10;
   display: none;
-  width: 300px;
+  width: 100%;
   padding: 1rem;
   visibility: hidden;
   border: 1px solid #cacaca;
@@ -6205,7 +6212,7 @@ a.thumbnail {
       padding-right: 0.9375rem;
       padding-left: 0.9375rem; } }
   @media screen and (min-width: 61.25em) {
-    .lp-feature-block h4 {
+    .lp-feature-block h4, .lp-feature-block .collection-grid__collection--title {
       margin: 0; }
     .lp-feature-block ul li a {
       padding: 0; }
@@ -6253,6 +6260,9 @@ a.thumbnail {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
+.logged-in .is-stuck {
+  margin-top: 64px !important; }
 
 footer {
   margin-top: 1rem;
@@ -6412,6 +6422,56 @@ header .menu {
   .ol_books .media-object .thumbnail img {
     width: 100px; }
 
+.collection-grid {
+  list-style-type: none;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+  @media print, screen and (min-width: 40em) {
+    .collection-grid {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .collection-grid__collection {
+    width: calc(50% - 1.25rem);
+    margin-right: 0.625rem;
+    margin-left: 0.625rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    background: none;
+    box-shadow: none;
+    overflow: hidden;
+    color: inherit; }
+    .collection-grid__collection > :last-child {
+      margin-bottom: 0; }
+  .collection-grid__collection--title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+    padding: 1rem;
+    background: #A88F71; }
+    .collection-grid__collection--title > :last-child {
+      margin-bottom: 0; }
+  .collection-grid__collection--description {
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    padding: 1rem; }
+    .collection-grid__collection--description > :last-child {
+      margin-bottom: 0; }
+
 /*
  *landing page tweaks
  */
@@ -6463,6 +6523,24 @@ header .menu {
     -ms-grid-columns: auto 16.25rem;
         grid-template-columns: auto 16.25rem;
     grid-template-areas: 'breadcrumbs breadcrumbs' 'content sidebar'; } }
+
+search-block-form .container-inline {
+  display: -ms-flexbox;
+  display: flex; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show .dropdown-content {
+  display: block; }
 
 .simple-search input[type="submit"],
 .simple-search label {

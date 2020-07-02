@@ -35,6 +35,7 @@ stylesheets[all][] = libraries/blueimp-gallery/css/blueimp-gallery.css
 ;regions[branding] = Branding
 regions[navigation] = Navigation
 regions[header] = Header
+regions[search_dropdown] = Search Dropdown Panel
 ;regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content

@@ -1,19 +1,58 @@
+//@format
 .search-dropdown {
   //position: relative;
   //display: inline-block;
+  svg {
+  }
 }
-search-block-form .container-inline {
-display: flex;
+.search-dropdown-toggle {
+  background: none;
+  margin-bottom: 0;
+  padding: 0;
+  margin-right: $global-margin;
+  svg {
+    width: 2rem;
+  }
+}
+.search-block-form .container-inline {
+  display: flex;
+  //padding: $global-padding;
+  align-items: center;
+  justify-content: center;
+  .form-item {
+    width: 400px;
+    margin-bottom: 0;
+  }
+  .block-content {
+    display: flex;
+    align-items: center;
+  }
+  input[type='text'] {
+    margin-bottom: 0;
+    height: rem-calc(80);
+    font-size: 3rem;
+  }
+  input[type='submit'] {
+    margin-bottom: 0;
+    height: rem-calc(80);
+    //font-size: 3rem;
+    display: none;
+  }
 }
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-	display: none;
+  display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: $tan-2;
   min-width: 160px;
-  width:100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  height: 165px;
 }
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show .dropdown-content {display:block;}
+.show .dropdown-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

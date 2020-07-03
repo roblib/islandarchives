@@ -11,10 +11,16 @@
     @include top-bar-container;
     flex-direction: column;
     flex-direction: row;
+    .topnav-right {
+      display: flex;
+    }
     @include breakpoint(medium) {
       flex-direction: row;
     }
 
+    .search-dropdown-toggle {
+      //@extend .top-bar-right;
+    }
     .site-branding {
       @extend .top-bar-left;
 
@@ -142,7 +148,7 @@
     display: none;
     @include breakpoint($topnav-breakpoint) {
       display: flex;
-      width: 100%;
+      //width: 100%;
       align-items: center;
       justify-content: flex-end;
       //margin-top: $global-margin/2;

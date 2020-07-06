@@ -13,11 +13,7 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
 
 
 ?>
-
-<style>
-</style>
 <div<?php print $attributes; ?>>
-
 
 <div id="offcanvas-full-screen" class="mobile-nav-panel offcanvas-full-screen" data-off-canvas data-transition="overlap">
   <div class="offcanvas-full-screen-inner">
@@ -27,8 +23,6 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
       <?php print render($page['navigation']); ?>
   </div>
 </div>
-
-
 
 	<div data-sticky-container>
 		<div class="nav-wrapper" data-sticky data-options="marginTop:0;" style="width:100%">
@@ -44,10 +38,10 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
 					<h2 class="site-branding__slogan"><?php print $site_slogan; ?></h2>
 					<?php endif; ?>
 				</div>
-				<?php print render($page['navigation']); ?>
-				<button onclick="searchDropdown()" class="search-dropdown-toggle button" type="button" data-toggle="search-dropdown">
-						<?php echo file_get_contents( $image_path . "Magnifying_glass_icon.svg"); ?>
-</button>
+      <div class="topnav-right">
+        <button onclick="searchDropdown()" class="search-dropdown-toggle button" type="button" data-toggle="search-dropdown"> <?php echo file_get_contents( $image_path . "Magnifying_glass_icon.svg"); ?> </button>
+        <?php print render($page['navigation']); ?>
+      </div>
 				<button class="menu-icon light" type="button" data-toggle="offcanvas-full-screen"></button>
 			</nav>
 <div class="search-dropdown" id="search-dropdown" ><div class="dropdown-content">

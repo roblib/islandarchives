@@ -15,11 +15,12 @@
   }
 }
 
-header {
+header.l-header {
   text-align: center;
   padding-bottom: $global_padding/2;
-  border-top: 4px double;
-  border-bottom: 4px double;
+  @include double_borders();
+  //border-top: 4px double;
+  //border-bottom: 4px double;
 }
 .site-name {
   margin: 0 $global-margin;
@@ -43,6 +44,9 @@ header {
 .site-name__container {
   display: flex;
   justify-content: center;
+  h1 {
+    margin-bottom: 0;
+  }
 }
 
 $dropdownmenu-background: $tan-3;

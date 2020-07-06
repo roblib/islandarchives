@@ -13,44 +13,46 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
 
 
 ?>
-
-<style>
-</style>
 <div<?php print $attributes; ?>>
-
 
 <div id="offcanvas-full-screen" class="mobile-nav-panel offcanvas-full-screen" data-off-canvas data-transition="overlap">
   <div class="offcanvas-full-screen-inner">
-    <button class="offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
+    <button class=" offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
       <span aria-hidden="true">&times;</span>
     </button>
+<div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." onblur="if (this.value == '') {this.value = 'Search';}" onfocus="if (this.value == 'Search') {this.value = '';}" placeholder="Search" type="text" id="edit-search-block-form--2" name="search_block_form" value="Search the archives..." size="40" maxlength="128" class="form-text">
+</div>
       <?php print render($page['navigation']); ?>
   </div>
 </div>
 
-
-
-
-
-
-  <div class="nav-wrapper">
-    <nav class="topnav" role="navigation">
-      <div class="site-branding">
-        <a href="https://upei.ca" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo">
-          <?php echo file_get_contents( $image_path . "upei.svg"); ?>
-        </a>
-        <?php if ($site_name): ?>
-        <a href="http://islandarchives.ca" class="site-branding__name" title="<?php print t('Home'); ?>" rel="home">IslandArchives </a>
-        <?php endif; ?>
-        <?php if ($site_slogan): ?>
-        <h2 class="site-branding__slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
+	<div data-sticky-container>
+		<div class="nav-wrapper" data-sticky data-options="marginTop:0;" style="width:100%">
+			<nav class="topnav" role="navigation" >
+				<div class="site-branding">
+					<a href="https://upei.ca" title="<?php print t('Home'); ?>" rel="home" class="site-branding__logo">
+						<?php echo file_get_contents( $image_path . "upei.svg"); ?>
+					</a>
+					<?php if ($site_name): ?>
+					<a href="http://islandarchives.ca" class="site-branding__name" title="<?php print t('Home'); ?>" rel="home">IslandArchives </a>
+					<?php endif; ?>
+					<?php if ($site_slogan): ?>
+					<h2 class="site-branding__slogan"><?php print $site_slogan; ?></h2>
+					<?php endif; ?>
+				</div>
+      <div class="topnav-right">
+        <button onclick="searchDropdown()" class="search-dropdown-toggle button" type="button" data-toggle="search-dropdown"> <?php echo file_get_contents( $image_path . "Magnifying_glass_icon.svg"); ?> </button>
+        <?php print render($page['navigation']); ?>
       </div>
-      <?php print render($page['navigation']); ?>
-      <button class="menu-icon light" type="button" data-toggle="offcanvas-full-screen"></button>
-    </nav>
-  </div>
-
+				<button class="menu-icon light" type="button" data-toggle="offcanvas-full-screen"></button>
+			</nav>
+<div class="search-dropdown" id="search-dropdown" ><div class="dropdown-content">
+				<?php print render($page['search_dropdown']); ?>
+</div></div>
+		</div>
+	</div>
 <!--bottom stuff removed-->
 
   <header class="l-header l-constrained" role="banner">
@@ -147,3 +149,25 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
   </footer>
 
 </div>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function searchDropdown() {
+  document.getElementById("search-dropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.search-dropdown-toggle')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>

@@ -15,6 +15,19 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
 ?>
 <div<?php print $attributes; ?>>
 
+<!-- icons -->
+<?php if (theme_get_setting('header_icons')): ?>
+  <div class="header_icons">
+    <?php
+      $fid = theme_get_setting('header_icons');
+      $image_url = file_create_url(file_load($fid)->uri);
+    ?>
+    <img src="<?php echo $image_url; ?>"/>
+  </div>
+  <?php endif; ?>
+
+<!-- /icons -->
+
 <div id="offcanvas-full-screen" class="mobile-nav-panel offcanvas-full-screen" data-off-canvas data-transition="overlap">
   <div class="offcanvas-full-screen-inner">
     <button class=" offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>

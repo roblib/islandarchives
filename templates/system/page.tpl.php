@@ -31,8 +31,6 @@ $image_path = drupal_get_path('theme', 'islandarchives') . '/images/';
 
 
 
-
-
   <div class="nav-wrapper">
     <nav class="topnav" role="navigation">
       <div class="site-branding">

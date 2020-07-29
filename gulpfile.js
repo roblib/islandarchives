@@ -26,7 +26,7 @@ var _path = '/sites/all/themes/islandarchives/build';
 
 //make sure the 2 Dirs are correct
 var config = {
-  remoteURL: 'https://stage.islandarchives.ca/',
+  remoteURL: 'https://dev.islandarchives.ca/',
   srcDir: './src',
   injectDir: './build',
   bsPort: 8000,

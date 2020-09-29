@@ -97,5 +97,6 @@ button.search-dropdown-toggle.button {
     padding-left: 1rem;
     font-size: 3rem;
     @include double_borders();
+    width: rem-calc(600);
   }
 }

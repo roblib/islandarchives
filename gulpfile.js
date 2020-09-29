@@ -26,7 +26,8 @@ var _path = '/sites/all/themes/islandarchives/build';
 
 //make sure the 2 Dirs are correct
 var config = {
-  remoteURL: 'https://dev.islandarchives.ca/',
+  //remoteURL: 'https://dev.islandarchives.ca/',
+  remoteURL: 'https://peildo.ca/',
   srcDir: './src',
   injectDir: './build',
   bsPort: 8000,

@@ -1,0 +1,46 @@
+//@format
+.group-collection-header {
+  @include xy-grid-container;
+  @include xy-grid;
+  .field--name-field-image {
+    @include xy-cell(4);
+    img {
+      width: 100%;
+      @include thumbnail;
+    }
+  }
+  .group-info {
+    @include xy-cell(8);
+    p {
+      font-size: 1.2rem;
+    }
+    .field__label {
+      @extend h3;
+    }
+    .field--type-taxonomy-term-reference {
+      display: flex;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: $global-padding 0;
+      margin-bottom: $global-margin;
+      .field__items {
+        display: flex;
+        font-size: 1.2rem;
+        margin-right: 5px;
+        .field__item {
+          margin-right: 10px;
+          line-height: 2;
+          &::after {
+            content: ',';
+          }
+        }
+      }
+    }
+  }
+  border-bottom: 1px solid #ccc;
+  padding-bottom: $global-padding * 2;
+  margin-bottom: $global-margin;
+}
+.islandora-collection-search-form {
+  display: flex;
+}

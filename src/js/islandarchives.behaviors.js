@@ -37,14 +37,14 @@
    */
   Drupal.behaviors.collectionthumbnail = {
     attach: function (context, settings) {
-      // get current url
-      console.log(settings);
-      var url = window.location.href;
-      var parts = url.split('/');
-      var lastSegment = parts.pop() || parts.pop(); // handle potential trailing slash
-      var collectionTN = '<img class="thumbnail collectiontn" src="/islandora/object/' + lastSegment + '/datastream/TN/view">'
-      // add to collecton markup
-      $(".islandora-metadata .fieldset-wrapper").prepend(collectionTN);
+       //get current url
+      //console.log(settings);
+      //var url = window.location.href;
+      //var parts = url.split('/');
+      //var lastSegment = parts.pop() || parts.pop();  handle potential trailing slash
+      //var collectionTN = '<img class="thumbnail collectiontn" src="/islandora/object/' + lastSegment + '/datastream/TN/view">'
+       //add to collecton markup
+      //$(".islandora-metadata .fieldset-wrapper").prepend(collectionTN);
     },
   };
   Drupal.behaviors.stickyHeader = {

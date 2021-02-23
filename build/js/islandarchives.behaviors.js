@@ -1,8 +1,5 @@
 (function ($) {
-
-  /**
-   * The recommended way for producing HTML markup through JavaScript is to write
-   * theming functions. These are similiar to the theming functions that you might
+  /** * The recommended way for producing HTML markup through JavaScript is to write * theming functions. These are similiar to the theming functions that you might
    * know from 'phptemplate' (the default PHP templating engine used by most
    * Drupal themes including Omega). JavaScript theme functions accept arguments
    * and can be overriden by sub-themes.
@@ -38,21 +35,28 @@
    *   Drupal.settings directly you should use this because of potential
    *   modifications made by the Ajax callback that also produced 'context'.
    */
-    Drupal.behaviors.stickyHeader = {
-        attach: function (context, settings) {
-
-
-            //$(window).scroll(function() {
-                //var winTop = $(window).scrollTop();
-                //if (winTop >= 30) {
-                    //$("body").addclass("sticky-shrinknav-wrapper");
-                //} else{
-                    //$("body").removeClass("sticky-shrinknav-wrapper");
-                //}
-            //});
-
-
-        }
-    };
-
+  Drupal.behaviors.collectionthumbnail = {
+    attach: function (context, settings) {
+      // get current url
+      console.log(settings);
+      var url = window.location.href;
+      var parts = url.split('/');
+      var lastSegment = parts.pop() || parts.pop(); // handle potential trailing slash
+      var collectionTN = '<img class="thumbnail collectiontn" src="/islandora/object/' + lastSegment + '/datastream/TN/view">'
+      // add to collecton markup
+      $(".islandora-metadata .fieldset-wrapper").prepend(collectionTN);
+    },
+  };
+  Drupal.behaviors.stickyHeader = {
+    attach: function (context, settings) {
+      //$(window).scroll(function() {
+      //var winTop = $(window).scrollTop();
+      //if (winTop >= 30) {
+      //$("body").addclass("sticky-shrinknav-wrapper");
+      //} else{
+      //$("body").removeClass("sticky-shrinknav-wrapper");
+      //}
+      //});
+    },
+  };
 })(jQuery);

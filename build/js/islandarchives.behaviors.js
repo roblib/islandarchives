@@ -35,7 +35,8 @@
    *   Drupal.settings directly you should use this because of potential
    *   modifications made by the Ajax callback that also produced 'context'.
    */
-  Drupal.behaviors.collectionthumbnail = {
+  
+  Drupal.behaviors.collectionViewLayout = {
     attach: function (context, settings) {
        //get current url
       //console.log(settings);
@@ -44,7 +45,14 @@
       //var lastSegment = parts.pop() || parts.pop();  handle potential trailing slash
       //var collectionTN = '<img class="thumbnail collectiontn" src="/islandora/object/' + lastSegment + '/datastream/TN/view">'
        //add to collecton markup
-      //$(".islandora-metadata .fieldset-wrapper").prepend(collectionTN);
+      //var wrapper_a = "<div class='collection_view_header'>"
+      var wrapper_a = "<div class='collection_header'>";
+      var wrapper_b = "</div>";
+      //$("#block-islandora-blocks-datastreams").before(wrapper_a);
+      //$(".islandora-collection-metadata-markup").after(wrapper_b);
+      //$("#block-islandora-collection-search-islandora-collection-search").before($(".view-collection"));
+      $(".view-collection").before($("#block-islandora-collection-search-islandora-collection-search"));
+      $(".islandora-collection-metadata-description").after($(".islandora-collection-metadata-in-collections"));
     },
   };
   Drupal.behaviors.stickyHeader = {

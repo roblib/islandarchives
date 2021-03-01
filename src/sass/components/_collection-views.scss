@@ -47,3 +47,29 @@
 .islandora-collection-search-form {
   display: flex;
 }
+.l-content {
+  > * {
+  }
+  .block--islandora-blocks-datastreams {
+    float: left;
+    @include clearfix;
+    margin-right: $global-margin * 2;
+  }
+  .islandora-collection-metadata-markup {
+    display: none;
+  }
+  .islandora-collection-metadata {
+    border-bottom: 1px solid #ccc;
+  }
+  .view-collection {
+    clear: both;
+    margin-top: $global-margin;
+    float: none;
+  }
+}
+.islandora-collection-search-form .form-wrapper {
+  display: flex;
+}
+.islandora-collection-search-form .form-wrapper * {
+  margin-bottom: 0px;
+}

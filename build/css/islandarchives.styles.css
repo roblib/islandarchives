@@ -6317,6 +6317,37 @@ a.thumbnail {
   display: -ms-flexbox;
   display: flex; }
 
+.l-content .block--islandora-blocks-datastreams {
+  float: left;
+  margin-right: 2rem; }
+  .l-content .block--islandora-blocks-datastreams::before, .l-content .block--islandora-blocks-datastreams::after {
+    display: table;
+    content: ' ';
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -ms-flex-order: 1;
+        order: 1; }
+  .l-content .block--islandora-blocks-datastreams::after {
+    clear: both; }
+
+.l-content .islandora-collection-metadata-markup {
+  display: none; }
+
+.l-content .islandora-collection-metadata {
+  border-bottom: 1px solid #ccc; }
+
+.l-content .view-collection {
+  clear: both;
+  margin-top: 1rem;
+  float: none; }
+
+.islandora-collection-search-form .form-wrapper {
+  display: -ms-flexbox;
+  display: flex; }
+
+.islandora-collection-search-form .form-wrapper * {
+  margin-bottom: 0px; }
+
 .islandora-solr-facet-wrapper {
   border-bottom: 4px double #A88F71;
   margin-bottom: 1rem;

@@ -2973,7 +2973,6 @@ h1,
 h2,
 .site-slogan,
 h3,
-.group-collection-header .group-info .field__label,
 h4,
 .collection-grid__collection--title,
 h5,
@@ -3010,8 +3009,7 @@ small {
 h1, .h1,
 h2,
 .site-slogan, .h2,
-h3,
-.group-collection-header .group-info .field__label, .h3,
+h3, .h3,
 h4,
 .collection-grid__collection--title, .h4,
 h5, .h5,
@@ -3024,8 +3022,7 @@ h6, .h6 {
   h1 small, .h1 small,
   h2 small,
   .site-slogan small, .h2 small,
-  h3 small,
-  .group-collection-header .group-info .field__label small, .h3 small,
+  h3 small, .h3 small,
   h4 small,
   .collection-grid__collection--title small, .h4 small,
   h5 small, .h5 small,
@@ -3047,9 +3044,7 @@ h2,
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-
-h3,
-.group-collection-header .group-info .field__label, .h3 {
+h3, .h3 {
   font-size: 1rem;
   line-height: 1.4;
   margin-top: 0;
@@ -3082,9 +3077,7 @@ h6, .h6 {
   h2,
   .site-slogan, .h2 {
     font-size: 2.125rem; }
-  
-  h3,
-  .group-collection-header .group-info .field__label, .h3 {
+  h3, .h3 {
     font-size: 1.5625rem; }
   
   h4,
@@ -3286,15 +3279,13 @@ ul.no-bullet, ol.no-bullet {
   p,
   h2,
   .site-slogan,
-  h3,
-  .group-collection-header .group-info .field__label {
+  h3 {
     orphans: 3;
     widows: 3; }
   
   h2,
   .site-slogan,
-  h3,
-  .group-collection-header .group-info .field__label {
+  h3 {
     page-break-after: avoid; }
   .print-break-inside {
     page-break-inside: auto; } }
@@ -6259,87 +6250,41 @@ a.thumbnail {
     .card h2, .card .site-slogan {
       font-size: 2.125rem; } }
 
-.group-collection-header {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  max-width: 90rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 2rem;
-  margin-bottom: 1rem; }
-  @media print, screen and (min-width: 40em) {
-    .group-collection-header {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-  .group-collection-header .field--name-field-image {
-    width: calc(33.33333% - 1.25rem);
-    margin-right: 0.625rem;
-    margin-left: 0.625rem; }
-    .group-collection-header .field--name-field-image img {
-      width: 100%;
-      display: inline-block;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      border: solid 4px #fefefe;
-      border-radius: 0;
-      box-shadow: 0 0 0 1px rgba(47, 43, 39, 0.2);
-      line-height: 0; }
-  .group-collection-header .group-info {
-    width: calc(66.66667% - 1.25rem);
-    margin-right: 0.625rem;
-    margin-left: 0.625rem; }
-    .group-collection-header .group-info p {
-      font-size: 1.2rem; }
-    .group-collection-header .group-info .field--type-taxonomy-term-reference {
+.ia_root .l-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1em;
+  grid-template-areas: 'header header header header' 'tabs tabs tabs tabs' 'img    desc   desc   desc' 'img    tags   tags   tags' 'img    search search search' 'footer footer footer footer'; }
+  .ia_root .l-content .pageTitle {
+    grid-area: header; }
+  .ia_root .l-content .tabs {
+    grid-area: tabs;
+    display: none; }
+  .ia_root .l-content .block--islandora-blocks-datastreams {
+    grid-area: img; }
+  .ia_root .l-content .islandora-collection-metadata-description {
+    grid-area: desc; }
+  .ia_root .l-content .islandora-collection-metadata-in-collections {
+    grid-area: tags; }
+  .ia_root .l-content #block-islandora-collection-search-islandora-collection-search {
+    grid-area: search; }
+    .ia_root .l-content #block-islandora-collection-search-islandora-collection-search .islandora-collection-search-form {
       display: -ms-flexbox;
-      display: flex;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      padding: 1rem 0;
-      margin-bottom: 1rem; }
-      .group-collection-header .group-info .field--type-taxonomy-term-reference .field__items {
-        display: -ms-flexbox;
-        display: flex;
-        font-size: 1.2rem;
-        margin-right: 5px; }
-        .group-collection-header .group-info .field--type-taxonomy-term-reference .field__items .field__item {
-          margin-right: 10px;
-          line-height: 2; }
-          .group-collection-header .group-info .field--type-taxonomy-term-reference .field__items .field__item::after {
-            content: ','; }
-
-.islandora-collection-search-form {
-  display: -ms-flexbox;
-  display: flex; }
-
-.l-content .block--islandora-blocks-datastreams {
-  float: left;
-  margin-right: 2rem; }
-  .l-content .block--islandora-blocks-datastreams::before, .l-content .block--islandora-blocks-datastreams::after {
-    display: table;
-    content: ' ';
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -ms-flex-order: 1;
-        order: 1; }
-  .l-content .block--islandora-blocks-datastreams::after {
-    clear: both; }
-
-.l-content .islandora-collection-metadata-markup {
-  display: none; }
-
-.l-content .islandora-collection-metadata {
-  border-bottom: 1px solid #ccc; }
-
-.l-content .view-collection {
-  clear: both;
-  margin-top: 1rem;
-  float: none; }
+      display: flex; }
+  .ia_root .l-content .view-collection {
+    grid-area: footer; }
+  .ia_root .l-content .islandora-collection-metadata-markup {
+    display: none; }
+  .ia_root .l-content .islandora-collection-metadata {
+    border-bottom: 4px double #796554; }
+  .ia_root .l-content .view-collection {
+    clear: both;
+    margin-top: 1rem;
+    float: none; }
 
 .islandora-collection-search-form .form-wrapper {
   display: -ms-flexbox;

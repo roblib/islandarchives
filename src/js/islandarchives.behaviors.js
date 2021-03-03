@@ -46,13 +46,13 @@
       //var collectionTN = '<img class="thumbnail collectiontn" src="/islandora/object/' + lastSegment + '/datastream/TN/view">'
        //add to collecton markup
       //var wrapper_a = "<div class='collection_view_header'>"
-      var wrapper_a = "<div class='collection_header'>";
-      var wrapper_b = "</div>";
-      //$("#block-islandora-blocks-datastreams").before(wrapper_a);
-      //$(".islandora-collection-metadata-markup").after(wrapper_b);
-      //$("#block-islandora-collection-search-islandora-collection-search").before($(".view-collection"));
-      $(".view-collection").before($("#block-islandora-collection-search-islandora-collection-search"));
-      $(".islandora-collection-metadata-description").after($(".islandora-collection-metadata-in-collections"));
+      //var wrapper_a = "<div class='collection_header'>";
+      //var wrapper_b = "</div>";
+      ////$("#block-islandora-blocks-datastreams").before(wrapper_a);
+      ////$(".islandora-collection-metadata-markup").after(wrapper_b);
+      ////$("#block-islandora-collection-search-islandora-collection-search").before($(".view-collection"));
+      //$(".view-collection").before($("#block-islandora-collection-search-islandora-collection-search"));
+      //$(".islandora-collection-metadata-description").after($(".islandora-collection-metadata-in-collections"));
     },
   };
   Drupal.behaviors.stickyHeader = {

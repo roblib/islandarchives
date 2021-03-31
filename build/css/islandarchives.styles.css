@@ -6262,8 +6262,7 @@ a.thumbnail {
   .ia_root .l-content .pageTitle {
     grid-area: header; }
   .ia_root .l-content .tabs {
-    grid-area: tabs;
-    display: none; }
+    grid-area: tabs; }
   .ia_root .l-content .block--islandora-blocks-datastreams {
     grid-area: img; }
   .ia_root .l-content .islandora-collection-metadata-description {

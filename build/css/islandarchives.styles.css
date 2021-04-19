@@ -6250,7 +6250,7 @@ a.thumbnail {
     .card h2, .card .site-slogan {
       font-size: 2.125rem; } }
 
-.ia_root .l-content {
+.ia_root.collection-view-layout .l-content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -6259,28 +6259,28 @@ a.thumbnail {
       grid-template-rows: auto;
   grid-gap: 1em;
   grid-template-areas: 'header header header header' 'tabs tabs tabs tabs' 'img    desc   desc   desc' 'img    tags   tags   tags' 'img    search search search' 'footer footer footer footer'; }
-  .ia_root .l-content .pageTitle {
+  .ia_root.collection-view-layout .l-content .pageTitle {
     grid-area: header; }
-  .ia_root .l-content .tabs {
+  .ia_root.collection-view-layout .l-content .tabs {
     grid-area: tabs; }
-  .ia_root .l-content .block--islandora-blocks-datastreams {
+  .ia_root.collection-view-layout .l-content .block--islandora-blocks-datastreams {
     grid-area: img; }
-  .ia_root .l-content .islandora-collection-metadata-description {
+  .ia_root.collection-view-layout .l-content .islandora-collection-metadata-description {
     grid-area: desc; }
-  .ia_root .l-content .islandora-collection-metadata-in-collections {
+  .ia_root.collection-view-layout .l-content .islandora-collection-metadata-in-collections {
     grid-area: tags; }
-  .ia_root .l-content #block-islandora-collection-search-islandora-collection-search {
+  .ia_root.collection-view-layout .l-content #block-islandora-collection-search-islandora-collection-search {
     grid-area: search; }
-    .ia_root .l-content #block-islandora-collection-search-islandora-collection-search .islandora-collection-search-form {
+    .ia_root.collection-view-layout .l-content #block-islandora-collection-search-islandora-collection-search .islandora-collection-search-form {
       display: -ms-flexbox;
       display: flex; }
-  .ia_root .l-content .view-collection {
+  .ia_root.collection-view-layout .l-content .view-collection {
     grid-area: footer; }
-  .ia_root .l-content .islandora-collection-metadata-markup {
+  .ia_root.collection-view-layout .l-content .islandora-collection-metadata-markup {
     display: none; }
-  .ia_root .l-content .islandora-collection-metadata {
+  .ia_root.collection-view-layout .l-content .islandora-collection-metadata {
     border-bottom: 4px double #796554; }
-  .ia_root .l-content .view-collection {
+  .ia_root.collection-view-layout .l-content .view-collection {
     clear: both;
     margin-top: 1rem;
     float: none; }

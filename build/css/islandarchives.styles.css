@@ -6259,6 +6259,8 @@ a.thumbnail {
       grid-template-rows: auto;
   grid-gap: 1em;
   grid-template-areas: 'header header header header' 'tabs tabs tabs tabs' 'img    desc   desc   desc' 'img    tags   tags   tags' 'img    search search search' 'footer footer footer footer'; }
+  .ia_root.collection-view-layout .l-content > * .thumbnail {
+    width: 100%; }
   .ia_root.collection-view-layout .l-content .pageTitle {
     grid-area: header; }
   .ia_root.collection-view-layout .l-content .tabs {

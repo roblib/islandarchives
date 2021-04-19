@@ -38,6 +38,13 @@
   
   Drupal.behaviors.collectionViewLayout = {
     attach: function (context, settings) {
+
+ if($("div").hasClass("view-collection")){
+    $("body").addClass("collection-view-layout");
+ }
+
+
+
        //get current url
       //console.log(settings);
       //var url = window.location.href;
@@ -57,14 +64,7 @@
   };
   Drupal.behaviors.stickyHeader = {
     attach: function (context, settings) {
-      //$(window).scroll(function() {
-      //var winTop = $(window).scrollTop();
-      //if (winTop >= 30) {
-      //$("body").addclass("sticky-shrinknav-wrapper");
-      //} else{
-      //$("body").removeClass("sticky-shrinknav-wrapper");
-      //}
-      //});
+
     },
   };
 })(jQuery);

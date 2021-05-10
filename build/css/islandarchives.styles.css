@@ -6250,6 +6250,43 @@ a.thumbnail {
     .card h2, .card .site-slogan {
       font-size: 2.125rem; } }
 
+.ia_root .l-content .islandora-pdf-object {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1em;
+  grid-template-areas: 'img    img search search' 'img    img   desc   desc' 'img    img   tags   tags' 'footer footer footer footer'; }
+  .ia_root .l-content .islandora-pdf-object > * .thumbnail {
+    width: 100%; }
+  .ia_root .l-content .islandora-pdf-object .pageTitle {
+    grid-area: header; }
+  .ia_root .l-content .islandora-pdf-object .tabs {
+    grid-area: tabs; }
+  .ia_root .l-content .islandora-pdf-object .islandora-pdf-content-wrapper {
+    grid-area: img; }
+  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-description {
+    grid-area: desc; }
+  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-in-collections {
+    grid-area: tags; }
+  .ia_root .l-content .islandora-pdf-object #block-islandora-collection-search-islandora-collection-search {
+    grid-area: search; }
+    .ia_root .l-content .islandora-pdf-object #block-islandora-collection-search-islandora-collection-search .islandora-collection-search-form {
+      display: -ms-flexbox;
+      display: flex; }
+  .ia_root .l-content .islandora-pdf-object .view-collection {
+    grid-area: footer; }
+  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-markup {
+    display: none; }
+  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata {
+    border-bottom: 4px double #796554; }
+  .ia_root .l-content .islandora-pdf-object .view-collection {
+    clear: both;
+    margin-top: 1rem;
+    float: none; }
+
 .ia_root.collection-view-layout .l-content {
   display: -ms-grid;
   display: grid;

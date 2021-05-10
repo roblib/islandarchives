@@ -42,6 +42,7 @@
  if($("div").hasClass("view-collection")){
     $("body").addClass("collection-view-layout");
  }
+      
 
 
 
@@ -62,8 +63,10 @@
       //$(".islandora-collection-metadata-description").after($(".islandora-collection-metadata-in-collections"));
     },
   };
-  Drupal.behaviors.stickyHeader = {
+  Drupal.behaviors.moveSearch = {
     attach: function (context, settings) {
+
+$( ".islandora-pdf-object" ).prepend( $( ".block--islandora-collection-search" ) );
 
     },
   };

@@ -6928,18 +6928,22 @@ button.search-dropdown-toggle.button {
 .nav-wrapper {
   /*padding: 0 1rem;*/ }
 
-.l-main, .l-region-header {
+.l-main,
+.l-region-header {
   max-width: 90rem;
   margin-right: auto;
   margin-left: auto; }
-  .l-main::before, .l-main::after, .l-region-header::before, .l-region-header::after {
+  .l-main::before, .l-main::after,
+  .l-region-header::before,
+  .l-region-header::after {
     display: table;
     content: ' ';
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
     -ms-flex-order: 1;
         order: 1; }
-  .l-main::after, .l-region-header::after {
+  .l-main::after,
+  .l-region-header::after {
     clear: both; }
 
 .pageTitle {
@@ -6948,6 +6952,15 @@ button.search-dropdown-toggle.button {
 .config-dropdown {
   display: inline-block;
   width: 100px; }
+
+.pageTitle {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  line-height: 1;
+  border-top: 4px double #333;
+  border-bottom: 4px double #333;
+  padding: 5px; }
 
 html {
   font-size: 18px; }

@@ -1,21 +1,25 @@
+//@format
 .nav-wrapper {
-
   /*padding: 0 1rem;*/
-
 }
-.l-main, .l-region-header {
+.l-main,
+.l-region-header {
   @include grid-row;
-
-
 }
 .pageTitle {
- //float:left; 
+  //float:left;
   width: calc(100% - 100px);
 }
 .config-dropdown {
-
-  display:inline-block;
+  display: inline-block;
   width: 100px;
-
-
+}
+.pageTitle {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  line-height: 1;
+  border-top: 4px double #333;
+  border-bottom: 4px double #333;
+  padding: 5px;
 }

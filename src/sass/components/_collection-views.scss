@@ -121,3 +121,30 @@
 .islandora-collection-search-form .form-wrapper * {
   margin-bottom: 0px;
 }
+//+++++++++++++++++++++++++
+//collection view blocks
+
+.collection-tile {
+  &--grid {
+    .view-content {
+      //@include xy-grid-container;
+      @include xy-grid;
+      @include xy-grid-layout(6, '.collection-tile--container');
+    }
+  }
+  @include card-container();
+  padding: 4px;
+  &--image {
+    width: 100%;
+  }
+  @include xy-gutters($gutter-position: left right bottom);
+  //height: 250px;
+  &--image_container {
+    width: 100%;
+  }
+  &--title {
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+}

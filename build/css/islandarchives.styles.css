@@ -6250,7 +6250,7 @@ a.thumbnail {
     .card h2, .card .site-slogan {
       font-size: 2.125rem; } }
 
-.ia_root .l-content .islandora-pdf-object {
+1.ia_root .l-content .islandora-pdf-object {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -6259,30 +6259,30 @@ a.thumbnail {
       grid-template-rows: auto;
   grid-gap: 1em;
   grid-template-areas: 'img    img search search' 'img    img   desc   desc' 'img    img   tags   tags' 'footer footer footer footer'; }
-  .ia_root .l-content .islandora-pdf-object > * .thumbnail {
+  1.ia_root .l-content .islandora-pdf-object > * .thumbnail {
     width: 100%; }
-  .ia_root .l-content .islandora-pdf-object .pageTitle {
+  1.ia_root .l-content .islandora-pdf-object .pageTitle {
     grid-area: header; }
-  .ia_root .l-content .islandora-pdf-object .tabs {
+  1.ia_root .l-content .islandora-pdf-object .tabs {
     grid-area: tabs; }
-  .ia_root .l-content .islandora-pdf-object .islandora-pdf-content-wrapper {
+  1.ia_root .l-content .islandora-pdf-object .islandora-pdf-content-wrapper {
     grid-area: img; }
-  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-description {
+  1.ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-description {
     grid-area: desc; }
-  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-in-collections {
+  1.ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-in-collections {
     grid-area: tags; }
-  .ia_root .l-content .islandora-pdf-object #block-islandora-collection-search-islandora-collection-search {
+  1.ia_root .l-content .islandora-pdf-object #block-islandora-collection-search-islandora-collection-search {
     grid-area: search; }
-    .ia_root .l-content .islandora-pdf-object #block-islandora-collection-search-islandora-collection-search .islandora-collection-search-form {
+    1.ia_root .l-content .islandora-pdf-object #block-islandora-collection-search-islandora-collection-search .islandora-collection-search-form {
       display: -ms-flexbox;
       display: flex; }
-  .ia_root .l-content .islandora-pdf-object .view-collection {
+  1.ia_root .l-content .islandora-pdf-object .view-collection {
     grid-area: footer; }
-  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-markup {
+  1.ia_root .l-content .islandora-pdf-object .islandora-collection-metadata-markup {
     display: none; }
-  .ia_root .l-content .islandora-pdf-object .islandora-collection-metadata {
+  1.ia_root .l-content .islandora-pdf-object .islandora-collection-metadata {
     border-bottom: 4px double #796554; }
-  .ia_root .l-content .islandora-pdf-object .view-collection {
+  1.ia_root .l-content .islandora-pdf-object .view-collection {
     clear: both;
     margin-top: 1rem;
     float: none; }
@@ -6345,32 +6345,50 @@ a.thumbnail {
   box-shadow: none;
   overflow: hidden;
   color: #2f2b27;
-  padding: 4px;
-  margin-left: 0.625rem;
-  margin-right: 0.625rem;
-  margin-bottom: 0.625rem; }
+  padding: 4px; }
   .collection-tile--grid .view-content {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: row wrap;
         flex-flow: row wrap; }
     .collection-tile--grid .view-content > .collection-tile--container {
-      width: calc(16.66667% - 1.25rem);
+      width: calc(100% - 1.25rem);
       margin-right: 0.625rem;
       margin-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .collection-tile--grid .view-content > .collection-tile--container {
+        width: calc(50% - 3.75rem);
+        margin-right: 1.875rem;
+        margin-left: 1.875rem; } }
+    @media print, screen and (min-width: 64em) {
+      .collection-tile--grid .view-content > .collection-tile--container {
+        width: calc(25% - 3.75rem);
+        margin-right: 1.875rem;
+        margin-left: 1.875rem; } }
+    @media screen and (min-width: 90em) {
+      .collection-tile--grid .view-content > .collection-tile--container {
+        width: calc(16.66667% - 3.75rem);
+        margin-right: 1.875rem;
+        margin-left: 1.875rem; } }
   .collection-tile > :last-child {
     margin-bottom: 0; }
   .collection-tile--image {
     width: 100%; }
-  @media print, screen and (min-width: 40em) {
-    .collection-tile {
-      margin-left: 1.875rem;
-      margin-right: 1.875rem;
-      margin-bottom: 1.875rem; } }
   .collection-tile--image_container {
-    width: 100%; }
-  .collection-tile--title h4, .collection-tile--title .collection-grid__collection--title {
-    font-size: 1.1rem; }
+    width: 100%;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    padding: 1rem; }
+    .collection-tile--image_container > :last-child {
+      margin-bottom: 0; }
+  .collection-tile--title {
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    padding: 1rem; }
+    .collection-tile--title > :last-child {
+      margin-bottom: 0; }
+    .collection-tile--title h4, .collection-tile--title .collection-grid__collection--title {
+      font-size: 1.1rem; }
 
 .islandora-solr-facet-wrapper {
   border-bottom: 4px double #A88F71;

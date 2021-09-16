@@ -1,4 +1,5 @@
-//@format
+1//@format
+
 
 .ia_root .l-content .islandora-pdf-object {
   > * {
@@ -129,7 +130,16 @@
     .view-content {
       //@include xy-grid-container;
       @include xy-grid;
-      @include xy-grid-layout(6, '.collection-tile--container');
+      @include xy-grid-layout(1, '.collection-tile--container');
+      @include breakpoint(medium) {
+        @include xy-grid-layout(2, '.collection-tile--container');
+      }
+      @include breakpoint(large) {
+        @include xy-grid-layout(4, '.collection-tile--container');
+      }
+      @include breakpoint(xxlarge) {
+        @include xy-grid-layout(6, '.collection-tile--container');
+      }
     }
   }
   @include card-container();
@@ -137,12 +147,14 @@
   &--image {
     width: 100%;
   }
-  @include xy-gutters($gutter-position: left right bottom);
+  //@include xy-gutters($gutter-position: left right bottom);
   //height: 250px;
   &--image_container {
     width: 100%;
+    @include card-section;
   }
   &--title {
+    @include card-section;
     h4 {
       font-size: 1.1rem;
     }

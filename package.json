@@ -24,7 +24,7 @@
     "bs-rewrite-rules": "^2.1.2",
     "del": "^2.2.2",
     "glob": "^7.1.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.1.0",
